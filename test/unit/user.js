@@ -18,7 +18,7 @@ describe('User', function(){
   beforeEach(function(done){
     cp.execFile(__dirname+'/../scripts/clean-db.sh', [db], {cwd:__dirname+'/../scripts'}, function(){
         done();
-    });  
+    });
   });
   describe('constructor', function(){
     it('should create a user object', function(done){
