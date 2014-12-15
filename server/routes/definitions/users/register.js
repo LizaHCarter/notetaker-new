@@ -13,6 +13,7 @@ module.exports = {
       avatar: Joi.string().required()
     }
   },
+  cors:{origin: ['http://localhost:8100'], credentials: true},
   auth: false,
   handler: function(request, reply){
     User.register(request.payload, function(err){
