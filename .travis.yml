@@ -15,3 +15,9 @@ before_script:
   - cd test/scripts; ./create-db.sh notetaker_test; cd ../..;
 after_script:
   - npm run coveralls
+env:
+  global:
+    - DATABASE_URL=postgres://postgres@localhost/notetaker_test
+    - AWS_BUCKET=lc-notetaker-test
+    - secure: "BM59VVOhMfSgXRFSCa/n8RKeE3eGw618yRh7cbDQpYvxTUlraOQXU1FVHzx3G5Xmxx0Htvv24YMOc4RIUzP38huVFGzOkCcU1Vo3pHHhqlp7FvBJvaArzsMVtysLshLXLyvnRnt3Pa7l8clrQgyyaoe4Mf0yeTZXJNSYpf00wpQ="
+    secure: "aIkla81UwLqKWNFboPyw69CISGDqhvdVFz0Zfyn+eUi9iuuG0tpoayufpb/M3e8l7r674nxOOnYmqMV7hZ300uo0xWRB4Nu1u/VnZWRdeUd/9ESADhHydlpNc8/g3kGyi8jDVRQg3TDuuWMbKkXD56Tbv6CKNAmxrCzbVN0wTpM="
