@@ -1,0 +1,33 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/node/bin/npm', 'run', 'e2e' ]
+2 info using npm@2.1.3
+3 info using node@v0.10.32
+4 verbose run-script [ 'pree2e', 'e2e', 'poste2e' ]
+5 info pree2e hapi-technologies@1.0.0
+6 info e2e hapi-technologies@1.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info hapi-technologies@1.0.0 Failed to exec e2e script
+9 verbose stack Error: hapi-technologies@1.0.0 e2e: `make test-e2e`
+9 verbose stack Exit status 2
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/node/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
+9 verbose stack     at ChildProcess.emit (events.js:98:17)
+9 verbose stack     at maybeClose (child_process.js:756:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
+10 verbose pkgid hapi-technologies@1.0.0
+11 verbose cwd /Users/LizaHCarter/Documents/Code/notetaker-new
+12 error Darwin 13.4.0
+13 error argv "node" "/usr/local/node/bin/npm" "run" "e2e"
+14 error node v0.10.32
+15 error npm  v2.1.3
+16 error code ELIFECYCLE
+17 error hapi-technologies@1.0.0 e2e: `make test-e2e`
+17 error Exit status 2
+18 error Failed at the hapi-technologies@1.0.0 e2e script.
+18 error This is most likely a problem with the hapi-technologies package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     make test-e2e
+18 error You can get their info via:
+18 error     npm owner ls hapi-technologies
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
