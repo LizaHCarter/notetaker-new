@@ -13,11 +13,20 @@ script:
 before_script:
   - psql -c 'create database notetaker_test;' -U postgres
   - cd test/scripts; ./create-db.sh notetaker_test; cd ../..;
+  - PORT=9001 node server/index.js&
+  - sleep 5
 after_script:
   - npm run coveralls
+  - npm run e2e
 env:
   global:
     - DATABASE_URL=postgres://postgres@localhost/notetaker_test
     - AWS_BUCKET=lc-notetaker-test
+    # AWS_SECRET_ACCESS_KEY
     - secure: "BM59VVOhMfSgXRFSCa/n8RKeE3eGw618yRh7cbDQpYvxTUlraOQXU1FVHzx3G5Xmxx0Htvv24YMOc4RIUzP38huVFGzOkCcU1Vo3pHHhqlp7FvBJvaArzsMVtysLshLXLyvnRnt3Pa7l8clrQgyyaoe4Mf0yeTZXJNSYpf00wpQ="
+    # AWS_ACCESS_KEY_ID
     - secure: "aIkla81UwLqKWNFboPyw69CISGDqhvdVFz0Zfyn+eUi9iuuG0tpoayufpb/M3e8l7r674nxOOnYmqMV7hZ300uo0xWRB4Nu1u/VnZWRdeUd/9ESADhHydlpNc8/g3kGyi8jDVRQg3TDuuWMbKkXD56Tbv6CKNAmxrCzbVN0wTpM="
+    # SAUCE_ACCESS_KEY
+    - secure: "PZhwMBgMyP5xuWqZNu5HSQcm/AcqDmA2Nk3MdaK9vInHy2/BzmLTWzRFXxx8A4WgFBUPPZ3rokDKAvk/tx16Ahw3Rn+oqVEQJafXOsowhYGG8PGWauuFpwBYrnn8oIlH14lPGSoGPKL6eLArtfkfaQB7QN+dMAXOjjvhvNURzvQ="
+    # SAUCE_USERNAME
+    - secure: "KQfDpWscLY4qpg5yRJb+c03EFovlaMK2rDSwJrO5a6VafKNY/Gv7VyAr6nL96Z5dvYnSIKqit7dNnz6QgPOGzyLAAdxK1JFPSWF/8aMVY5h18zjoqIi24xsYo9Pk/+TFE8jS0TSpB5jJajlQnLTcTBcB7Vl98pVNEUy5esfMd/s="
