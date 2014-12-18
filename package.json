@@ -17,7 +17,8 @@
     "postinstall": "grunt deploy",
     "syntax": "grunt build",
     "test": "make test",
-    "coveralls": "make test-cov | coveralls"
+    "coveralls": "make test-cov | coveralls",
+    "e2e": "make test-e2e"  
   },
   "author": "Chyld Medford <chyld.medford@gmail.com>",
   "license": "MIT",
@@ -45,6 +46,7 @@
     "jshint-stylish": "^1.0.0",
     "lout": "^6.0.1",
     "pg": "^4.0.0",
+    "protractor": "^1.5.0",
     "request": "^2.49.0"
   },
   "devDependencies": {

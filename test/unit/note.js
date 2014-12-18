@@ -63,7 +63,7 @@ describe('Note', function(){
       it('should count notes', function(done){
         Note.count({id:1}, function(err, results){
             expect(err).to.be.null;
-            expect(results).to.equal('1');
+            expect(results).to.equal('2');
             done();
         });
       });
@@ -87,7 +87,7 @@ describe('Note', function(){
    });
    describe('.upload', function(){
       it('should upload an image', function(done){
-        var file = fs.createReadStream(__dirname+'/../fixtures/flag.png')
+        var file = fs.createReadStream(__dirname+'/../fixtures/flag.png');
         Note.upload({token:'tok'}, file, 'flag.png', noteId, function(err, results){
             expect(err).to.be.null;
             done();
