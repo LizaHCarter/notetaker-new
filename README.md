@@ -5,4 +5,4 @@ notetaker-new
 ##### Coveralls
 [![Coverage Status](https://coveralls.io/repos/LizaHCarter/notetaker-new/badge.png?branch=master)](https://coveralls.io/r/LizaHCarter/notetaker-new?branch=master)
 ##### SauceLabs
-[![Sauce Test Status](https://saucelabs.com/browser-matrix/lizaheathcarter.svg)](https://saucelabs.com/u/lizaheathcarter)
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/liza-notetaker.svg)](https://saucelabs.com/u/liza-notetaker)
